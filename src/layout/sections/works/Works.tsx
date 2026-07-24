@@ -1,34 +1,45 @@
-import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle.tsx";
 import {TabMenu} from "./tabMenu/TabMenu.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {Work} from "./work/Work.tsx";
 import SocialImg from "../../../assets/img/proj1.png"
-import SocialTimer from "../../../assets/img/proj2.png"
 import {Container} from "../../../components/Container.tsx";
+import * as React from "react";
+import { S } from "./Works_Styles.ts";
 
 const worksItems = ["All", "landing page", "React", "spa"]
 
-export const Works = () => {
+
+const workData= [
+    {
+        title: "Social Network",
+        src: SocialImg,
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    },
+    {
+        title: "Timer",
+        src: SocialImg,
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit ut labore et dolore magna aliqua Ut enim",
+    }
+]
+
+export const Works: React.FC = () => {
     return (
-        <StyledWorks>
+        <S.Works>
             <Container>
                 <SectionTitle>My Works</SectionTitle>
                 <TabMenu menuItems={worksItems}/>
-                <FlexWrapper justify={"space-between"} alignItems={"flex-start"}>
-                    <Work title={"Social Network"}
-                          text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
-                          src={SocialImg}/>
+                <FlexWrapper justify={"space-between"} alignItems={"flex-start"} wrap={"wrap"}>
 
-                    <Work title={"Timer"}
-                          text={"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit ut labore et dolore magna aliqua Ut enim"}
-                          src={SocialTimer}/>
+                    {workData.map((w, index) => {
+                        return <Work title={w.title} key={index}
+                                     text={w.text}
+                                     src={w.src}/>
+                    })}
+
                 </FlexWrapper>
             </Container>
-        </StyledWorks>
+        </S.Works>
     );
 };
 
-const StyledWorks = styled.section`
-    
-`
