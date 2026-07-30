@@ -1,7 +1,9 @@
 import {theme} from "../../../styles/Theme.tsx";
 import styled from "styled-components";
 
-const Contact = styled.section``
+const Contact = styled.section`
+    position: relative;
+`
 
 const Form = styled.form`
     max-width: 540px;

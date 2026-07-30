@@ -5,6 +5,8 @@ import styled from "styled-components";
 const Footer = styled.footer`
     background-color: ${theme.colors.primaryBg};
     padding: 40px 0;
+    
+    position: relative;
 `
 
 const Name = styled.span`

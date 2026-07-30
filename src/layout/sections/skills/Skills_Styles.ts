@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme.tsx";
 
-const Skills = styled.section``
+const Skills = styled.section`
+    position: relative;
+`
 
 const Skill = styled.div`
     width: 380px;

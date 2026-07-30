@@ -5,6 +5,9 @@ import {Link} from "../../../components/Link.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 
 const Works = styled.section`
+    
+    position: relative;
+    
     ${FlexWrapper} {
         gap: 30px;
     }
