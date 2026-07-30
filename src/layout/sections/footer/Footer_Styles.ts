@@ -1,4 +1,4 @@
-import {font} from "../../../styles/Common.tsx";
+import {font} from "../../../styles/Common.ts";
 import {theme} from "../../../styles/Theme.tsx";
 import styled from "styled-components";
 

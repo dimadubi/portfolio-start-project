@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../../styles/Theme.tsx";
-import {font} from "../../../styles/Common.tsx";
+import {font} from "../../../styles/Common.ts";
 
 const Main = styled.section`
     min-height: 100vh;
@@ -47,7 +47,7 @@ const Photo = styled.img`
 
 const MainTitle = styled.h1`
 
-    ${font({weight: 400, Fmax: 27, Fmin: 20})}
+    ${font({weight: 400, Fmax: 27, Fmin: 20})};
     
 `
 

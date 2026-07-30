@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme.tsx";
-import {font} from "../styles/Common.tsx";
+import {font} from "../styles/Common.ts";
 
 export const SectionTitle = styled.h2`
     
