@@ -5,6 +5,7 @@ import * as React from "react";
 import {S} from "./Main_Styles.ts";
 import Typewriter from "typewriter-effect"
 import {VisuallyHidden} from "../../../styles/Common.ts";
+import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
     return (
@@ -27,10 +28,20 @@ export const Main: React.FC = () => {
                                 </span>
                         </S.MainTitle>
                     </div>
+                    <Tilt
+                        className="parallax-effect-img"
+                        tiltMaxAngleX={40}
+                        tiltMaxAngleY={40}
+                        perspective={800}
+                        transitionSpeed={1500}
+                        scale={1.1}
+                        gyroscope={true}
 
-                    <S.PhotoWrapper>
-                        <S.Photo src={photo} alt="photo"/>
-                    </S.PhotoWrapper>
+                    >
+                        <S.PhotoWrapper>
+                            <S.Photo src={photo} alt="photo"/>
+                        </S.PhotoWrapper>
+                    </Tilt>
                 </FlexWrapper>
             </Container>
         </S.Main>
