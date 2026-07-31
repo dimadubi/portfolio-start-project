@@ -5,7 +5,7 @@ import { S } from "./Contacs.ts";
 
 export const Contact = () => {
     return (
-        <S.Contact>
+        <S.Contact id={"contact"}>
             <Container>
                 <SectionTitle>Contact</SectionTitle>
                 <S.Form>
