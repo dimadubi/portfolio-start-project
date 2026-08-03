@@ -20,6 +20,7 @@ const Mask = styled.span`
     height: 50%;
     overflow-y: hidden;
     color: ${theme.colors.accent};
+    transition: ${theme.animation.transition};
 
     & + & {
         top: 50%;
@@ -52,6 +53,7 @@ const NavLink = styled(Link)`
         z-index: 1;
 
         transform: scale(0);
+        transition: ${theme.animation.transition};
     }
 
     &:hover, &.active {
@@ -89,12 +91,16 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
     bottom: 0;
     z-index: 999;
     background-color: #1F1F20E5;
-    display: none;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transform: translateY(-100%);
+    transition: 0.7s ease-in-out;
     
     ${props => props.isOpen && css<{isOpen: boolean}>`
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        transform: translateY(0);
     `}
     
     

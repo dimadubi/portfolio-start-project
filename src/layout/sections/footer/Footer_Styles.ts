@@ -39,9 +39,13 @@ const SocialLink = styled.a`
     
     color: ${theme.colors.accent};
     
+    transition: ${theme.animation.transition};
+    
     &:hover {
         color: ${theme.colors.primaryBg};
         transform: translateY(-4px);
+        
+        transition: ${theme.animation.transition};
     }
     
 `
